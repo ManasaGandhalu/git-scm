@@ -38,6 +38,9 @@
 #define PATCHSAME	(1u<<9)
 #define BOTTOM		(1u<<10)
 
+/* WARNING: This is also used as METAINFO_SHOWN in builtin/blame.c. */
+#define MISSING		(1u<<12)
+
 /* WARNING: This is also used as REACHABLE in commit-graph.c. */
 #define PULL_MERGE	(1u<<15)
 

@@ -387,7 +387,7 @@ static void do_traverse(struct traversal_context *ctx)
 		 * an uninteresting boundary commit may not have its tree
 		 * parsed yet, but we are not going to show them anyway
 		 */
-		if (!ctx->revs->tree_objects)
+		if (!ctx->revs->tree_objects || commit->object.flags & MISSING)
 			; /* do not bother loading tree */
 		else if (repo_get_commit_tree(the_repository, commit)) {
 			struct tree *tree = repo_get_commit_tree(the_repository,
